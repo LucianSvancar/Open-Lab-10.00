@@ -10,7 +10,9 @@ namespace Open_Lab_10._00
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("AHOJ ROMAN"); 
+            Book LOTR = new Book();
+            LOTR.title = "Lord of the rings";
+            Console.WriteLine("THE TITLE OF BOOK IS:" + LOTR.title);
         }
     }
 }
