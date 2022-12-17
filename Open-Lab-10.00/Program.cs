@@ -12,7 +12,7 @@ namespace Open_Lab_10._00
         {
             Book LOTR = new Book();
             LOTR.title = "Lord of the rings";
-            Console.WriteLine("THE TITLE OF BOOK IS:" + LOTR.title);
+            Console.WriteLine("THE TITLE OF BOOK IS: " + LOTR.title);
         }
     }
 }
