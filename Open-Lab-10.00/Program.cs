@@ -11,8 +11,16 @@ namespace Open_Lab_10._00
         static void Main(string[] args)
         {
             Book LOTR = new Book();
-            LOTR.title = "Lord of the rings";
-            Console.WriteLine("THE TITLE OF BOOK IS: " + LOTR.title);
+            LOTR.title_write ("Lord of the rings");
+            LOTR.pages_write (1178);
+            LOTR.category_write ("heroic romance");
+            LOTR.author_write ("JOHN ROLAND REUEL TOLKIEN");
+            LOTR.releaseDate_write ("29.7.1954");
+            LOTR.write_fields();
+       
+
+
+
         }
     }
 }
