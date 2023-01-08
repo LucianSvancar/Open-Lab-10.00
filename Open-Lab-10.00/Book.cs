@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using System.Xml.Schema;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Open_Lab_10._00
@@ -14,17 +15,63 @@ namespace Open_Lab_10._00
      private int pages;
      private string category;
      private string author;
-     private string releaseDate;
+     private int releaseDate;
 
-         public void title_write(string title)
+        public string Title
         {
+           get { return title; }
+           set { title = value; }
+        }
+        public int Pages
+        {
+            get { return pages; }
+            set
+            {
+
+                if (value<= 0 )
+                {
+                    pages = 1;
+                }
+
+                else
+                {
+                    pages = value;
+                }
+            }
+        }
+        public string Category
+        {
+            get { return category; }
+           set { category = value; }
+        }
+        public string Author
+        {
+            get { return author; }
+           set { author = value; }
+        }
+        public int ReleaseDate
+        {
+            get { return releaseDate;}
+            set
+            {
+               if ( value < 1450 || value > 2021)  
+               {  releaseDate = -1;
+               }
+               else
+               {
+                  releaseDate = value;
+               }
+            }
+        }
+        public void title_write(string title)
+        { 
             this.title = title;
         }
-         public void pages_write(int pages)
-        {
-            this.pages = pages;
+        public void pages_write(int pages)
+        { 
+          this.pages = pages;
         }
-         public void category_write(string category)
+        public void category_write(string category)
         {
             this.category = category;
         }
@@ -44,7 +91,28 @@ namespace Open_Lab_10._00
             Console.WriteLine("Author: " + author);
             Console.WriteLine("releaseDate: " + releaseDate);
         }
-
-
+        public Book() 
+        { title = "-1";
+          pages = -1;
+          category = "-1";
+          author = "-1";
+          releaseDate = -1;        
+        }
+        public Book(string title , int pages) 
+        {
+          category = "-1";
+          author = "-1";
+          releaseDate = -1;  
+          this.title = title;
+          this.pages = pages;
+        }
+        public Book(string title, int pages, string author, string category, int releaseDate)
+        {
+          this.title = title;
+          this.pages = pages;
+          this.author = author;
+          this.category = category;
+          this.releaseDate =releaseDate;
+        }
     }
 }  
