@@ -29,8 +29,6 @@ namespace Open_Lab_10._00
             LOTR2.write_fields();
             LOTR3.write_fields();
             HOBIT.write_fields();
-
-
         }
     }
 }
