@@ -41,7 +41,7 @@ namespace Open_Lab_10._00
         }
         public string Category
         {
-            get { return category; }
+          
            set { category = value; }
         }
         public string Author
@@ -114,5 +114,11 @@ namespace Open_Lab_10._00
           this.category = category;
           this.releaseDate =releaseDate;
         }
+      
+        
+        ///Tento zoznam obsahuje kategórie pre knihy(Len pre autora)
+       
+        public static List<string> categoryList = new List<string>()
+        {"For kids", "Romantic", "Science fiction", "Adventurous", "Academically" };
     }
 }  

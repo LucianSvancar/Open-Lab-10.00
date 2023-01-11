@@ -20,7 +20,6 @@ namespace Open_Lab_10._00
         
             Console.WriteLine("Title is: " + LOTR.Title);
             Console.WriteLine("Pages are: " + LOTR.Pages);
-            Console.WriteLine("Category is: " + LOTR.Category);
             Console.WriteLine("Author is: " + LOTR.Author);
             Console.WriteLine("releaseDate is: " + LOTR.ReleaseDate);
             Book LOTR2 = new Book();
@@ -29,6 +28,8 @@ namespace Open_Lab_10._00
             LOTR2.write_fields();
             LOTR3.write_fields();
             HOBIT.write_fields();
+            
+            HOBIT.Category = Book.categoryList[2];
         }
     }
 }
