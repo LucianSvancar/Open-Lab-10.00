@@ -115,8 +115,10 @@ namespace Open_Lab_10._00
           this.releaseDate =releaseDate;
         }
       
-        
-        ///Tento zoznam obsahuje kategórie pre knihy(Len pre autora)
+             
+        /// <summary>
+       /// Tento zoznam obsahuje kategórie pre knihy(Len pre autora)
+       /// </summary>
        
         public static List<string> categoryList = new List<string>()
         {"For kids", "Romantic", "Science fiction", "Adventurous", "Academically" };
